@@ -20,12 +20,29 @@
 //  Created by CharlesChen on 2023/12/07.
 //  Copyright © 2020年 Tencent. All rights reserved.
 
-import { Logger } from './utils';
+import log4js from 'log4js'
 
-const logger = new Logger('main');
+export class Logger {
+  private readonly logger: log4js.Logger;
 
-(async function () {
-  logger.info('>>> begin');
-  // TODO
-  logger.info('>>> end');
-})();
+  constructor(category: string) {
+    this.logger = log4js.getLogger(category);
+    this.logger.level = "debug";
+  }
+
+  debug(message: any, ...args: any[]) {
+    this.logger.debug(message, ...args);
+  }
+
+  info(message: any, ...args: any[]) {
+    this.logger.info(message, ...args);
+  }
+
+  warn(message: any, ...args: any[]) {
+    this.logger.warn(message, ...args);
+  }
+
+  error(message: any, ...args: any[]) {
+    this.logger.error(message, ...args);
+  }
+}
