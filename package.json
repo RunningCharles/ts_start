@@ -1,0 +1,22 @@
+{
+  "name": "ts_start",
+  "version": "0.0.1",
+  "description": "typescript start project",
+  "type": "module",
+  "scripts": {
+    "start": "node --no-warnings --es-module-specifier-resolution=node --loader ts-node/esm src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "leogcchen",
+  "private": true,
+  "license": "BSD 2.0",
+  "devDependencies": {
+    "@types/node": "^20.10.3",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  }
+}
