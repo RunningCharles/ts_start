@@ -2,22 +2,19 @@
   "name": "ts_start",
   "version": "0.0.1",
   "description": "typescript start project",
-  "type": "module",
   "scripts": {
-    "start": "node --no-warnings --es-module-specifier-resolution=node --loader ts-node/esm src/index.ts"
+    "start": "ts-node src/index.ts",
+    "build": "webpack"
   },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "author": "leogcchen",
   "private": true,
-  "license": "BSD 2.0",
   "devDependencies": {
     "@types/node": "^20.10.3",
+    "ts-loader": "^9.5.1",
     "ts-node": "^10.9.1",
     "tslib": "^2.6.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.5.3",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
     "log4js": "^6.9.1"
